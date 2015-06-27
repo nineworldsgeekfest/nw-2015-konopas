@@ -84,8 +84,8 @@ KonOpas.Item.new = function(it) {
 	KonOpas.Item.new = function(it) {
 		star.id = 's' + it.id;
 		item.id = 'p' + it.id;
-		title.textContent = it.title;
-		loc.textContent = _loc_str(it);
+		title.innerHTML = it.title;
+		loc.innerHTML = _loc_str(it);
 		return frame.cloneNode(true);
 	};
 	return KonOpas.Item.new(it);
