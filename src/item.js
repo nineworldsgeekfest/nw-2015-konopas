@@ -22,7 +22,7 @@ KonOpas.Item.show_extra = function(item, id) {
 		if (!it.tags || !it.tags.length) return '';
 		var o = {};
 		it.tags.forEach(function(t) {
-			var cat = 'tags';
+			var cat = 'tracks';
 			var tgt = KonOpas.Prog.hash({'tag': t});
 			var a = t.split(':');
 			if (a.length > 1) { cat = a.shift(); t = a.join(':'); }
