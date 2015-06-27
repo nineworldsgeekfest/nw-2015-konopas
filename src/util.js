@@ -130,6 +130,12 @@ KonOpas.clean_links = function(p) {
 			o['URL'] = { 'tgt': url, 'txt': url.replace(/^https?:\/\//, '') };
 			ok = true;
 		}
+		if (p.links.bio) {
+			var bio = p.links.bio/trim();
+			if (!/:\/\//.test(url)) url = 'http://' + url;
+			o['Bio'] = { 'tgt': bio, 'txt': 'Click' };
+			ok = true;
+		}
 		if (p.links.fb) {
 			var fb = p.links.fb.trim().replace(/^(https?:\/\/)?(www\.)?facebook.com(\/#!)?\//, '');
 			o['Facebook'] = { 'txt': fb };
