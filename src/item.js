@@ -69,8 +69,12 @@ KonOpas.Item.new = function(it) {
 			if (s) s += ', ';
 			s += KonOpas.pretty_time(it.time, konopas) + ' - ' + KonOpas.pretty_time(KonOpas.time_sum(it.time, it.mins), konopas);
 		}
+		if (it.tags && it.tags.length) {
+			s += ' (' + it.tags.join(', ') + ')';
+		}
 		return s;
 	}
+
 	var frame = _new_elem('div', 'item_frame'),
 	    star  = frame.appendChild(_new_elem('div', 'item_star')),
 	    item  = frame.appendChild(_new_elem('div', 'item')),
