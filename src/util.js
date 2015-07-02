@@ -131,7 +131,7 @@ KonOpas.clean_links = function(p) {
 			ok = true;
 		}
 		if (p.links.bio) {
-			var bio = p.links.bio/trim();
+			var bio = p.links.bio.trim();
 			if (!/:\/\//.test(url)) url = 'http://' + url;
 			o['Bio'] = { 'tgt': bio, 'txt': 'Click' };
 			ok = true;
