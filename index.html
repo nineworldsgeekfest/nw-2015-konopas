@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html><!-- manifest="konopas.appcache" -->
+<html>
 <head>
 <meta charset="utf-8">
-<link rel="stylesheet" href="skin/konopas.css">
+<link rel="stylesheet" href="skin/konopas.min.css">
 <meta name="HandheldFriendly" content="true">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
 
 <!-- Android + favicon -->
 <meta name="mobile-web-app-capable" content="yes">
-<link rel="shortcut icon" sizes="196x196" href="skin/favicon.196.png">
+<link rel="shortcut icon" sizes="196x196" href="skin/favicon.196.png" />
 
 <!-- iOS -->
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -33,7 +33,7 @@
 <meta name="msapplication-square310x310logo" content="data/icon.ie.png">
 -->
 
-<title>KonOpas Sample Guide</title>
+<title>Nine Worlds 2015: Schedule</title>
 
 <body><div id="top"></div>
 <div id="load_disable"></div>
@@ -44,13 +44,13 @@
 <div id="banner">
 <div id="server_connect"></div>
 
-<h1><a href="#info" alt="CONVENTION" title="CONVENTION">
-<img id="title-small" src="skin/konopas.png" style="width: 240px;">
-<img id="title" src="skin/konopas.png" style="width: 200px;"></a></h1>
+<h1><a href="#info" alt="Nine Worlds 2015" title="Nine Worlds 2015">
+<img id="title-small" src="https://nineworlds.co.uk/sites/nineworlds.co.uk/themes/nineworlds/logo.png">
+<img id="title" src="https://nineworlds.co.uk/sites/nineworlds.co.uk/themes/nineworlds/logo.png"></a></h1>
 
 <ul id="tabs">
 <li id="tab_star"><a href="#star" data-txt>My con</a>
-<li id="tab_prog"><a href="#" data-txt>Program</a><div id="day-sidebar" class="sub-side"></div>
+<li id="tab_prog"><a href="#" data-txt>Programme</a><div id="day-sidebar" class="sub-side"></div>
 <li id="tab_part"><a href="#part" data-txt>People</a><div id="part-sidebar" class="sub-side"></div>
 <li id="tab_info"><a href="#info" data-txt>Info</a>
 </ul>
@@ -68,10 +68,10 @@
 	<div id="prog_filters" class="filters">
 		<div id="prog_lists"></div>
 		<form name="search" id="search">
-			<input type="text" id="q" required data-txt="Search" data-txt-attr="placeholder">
+			<input type="text" id="q" required data-txt="Search" data-txt-attr="placeholder" placeholder="Search">
 			<div id="q_ctrl">
-			<input type="submit" id="q_submit" data-txt="Go" data-txt-attr="value">
-			<input type="reset" id="q_clear" data-txt="Clear all" data-txt-attr="value">
+			<input type="submit" id="q_submit" data-txt="Go" data-txt-attr="value" text="Go" value="Go">
+			<input type="reset" id="q_clear" data-txt="Clear all" data-txt-attr="value" text="Clear all filters" value="Clear all filters">
 			</div>
 			<div id="q_hint" class="hint"></div>
 		</form>
@@ -87,13 +87,25 @@
 </div>
 
 <div id="info_view" class="view">
-<p>This is the programme guide for <a href="http://example.org/">CONVENTION</a>. It should be suitable for use on most browsers and devices. It's an instance of <a href="http://konopas.org/">KonOpas</a>, an open-source project providing conventions with easy-to-use mobile-friendly guides.
+<h2>Welcome</h2>
+<p>This is the programme guide for <a href="https://nineworlds.co.uk/" alt="Nine Worlds 2015" title="Nine Worlds 2015">Nine Worlds 2015</a>, designed for use on phone, desktop and tablet browsers. We'll keep the programme and participant data up to date throughout the convention if anything changes. <div id="last-updated">They were last updated <span></span>.</div></p>
+<h2>To find sessions</h2>
+<ul id="find_sessions">
+    <li>Click on <b>Programme</b>.</li>
+    <li>Use the <b>Search</b> box, and/or track and day selectors at the top of the page to filter the list of sessions.</li>
+    <li>Click the session name to get a full description.</li>
+    <li>Alternatively, use the <b>People</b> section to find what individual participants are up to.</li>
+</ul>
 
-<p><div id="last-updated">Programme and participant data were last updated <span></span>.</div>
+<h2>To build your own schedule</h2>
+<p>Click the light blue square to the left of a session title. It will turn red, and the session will be added to the list of sessions in <b>My con</b>. Click again to remove a session from your schedule.</p>
 
+<h2>To save your schedule</h2>
+<p>Your browser will remember your con schedule between uses. To access the same schedule on a different device or browser (e.g. moving from a desktop to a mobile phone), go to <b>My con</b>, select <b>Export selection</b> at the top of the screen, and save or send the resulting link to your other device's browser.</p>
+
+<h2>To use the schedule on a mobile phone</h2>
 <div id="install-instructions">
-<p>This guide will work in your browser even when you don't have an internet connection.
-<h4 class="collapse">You can also install it as a home screen app</h4>
+<p>This guide will work in your browser even when you don't have an internet connection. You can also install it as a home screen app:
 <dl class="compact-dl">
 <dt>Safari on iPhone/iPad<dd>Tap on <i class="ios_share_icon"></i> (share), then tap <b>Add to Home Screen</b>.
 <dt>Chrome on Android<dd>Tap on <i class="android_menu_icon"></i> (menu), then tap <b>Add to Home Screen</b>.
@@ -101,83 +113,56 @@
 <dt>IE on Windows Phone<dd>Tap on <i class="ie_menu_icon"></i> (menu), then tap <b>Pin to Start</b>
 </dl>
 </div>
+
+<p>This schedule should be suitable for use on most browsers and devices. It's an instance of <a href="http://konopas.org/" alt="KonOpas" title="KonOpas">KonOpas</a>, an open-source project providing conventions with easy-to-use mobile-friendly guides.</p>
+
 <script>
 if (navigator.standalone) document.getElementById('install-instructions').style.display = 'none';
 </script>
-
-<!-- SAMPLE SECTIONS FOR "INFO" VIEW, UNCOMMENT TO SEE
-<style>
-#map { width: 100% !important; }
-#map td { text-align: center !important; padding: 6px 32px; }
-#map a, #map span { font-family: 'Oswald'; font-weight: 400; font-size: 1.2em; cursor: pointer; }
-#map a:hover, #map span:hover { text-decoration: underline; }
-#map tr:hover, .quick-ref tr:hover { background: inherit !important; }
-.quick-ref dt { margin: 6px 0 3px; }
-.quick-ref table { width: auto !important; border-spacing: 0; margin-bottom: 6px; }
-.quick-ref td { text-align: left !important; }
-#info_view .quick-ref td.c { text-align: center !important; }
-.quick-ref td:nth-child(2) { text-align: right !important; padding: 0 0 0 5px; }
-.quick-ref td:nth-child(3) { padding-left: 0; }
-</style>
-
-<h2>Sample Maps</h2>
-<table id="map">
-<tr><td><a class="popup-link" href="http://guide.2014.arisia.org/data/arisia-westin-3W.png">Mezzanine Level&nbsp;(3W)</a>
-    <td><a class="popup-link" href="http://guide.2014.arisia.org/data/arisia-westin-3E.png">Conference Level&nbsp;(3E)</a>
-<tr><td colspan="2"><a class="popup-link" href="http://guide.2014.arisia.org/data/arisia-westin-2.png">Lobby Level&nbsp;(2)</a>
-<tr><td><a class="popup-link" href="http://guide.2014.arisia.org/data/arisia-westin-1W.png">Concourse Level&nbsp;(1W)</a>
-    <td><a class="popup-link" href="http://guide.2014.arisia.org/data/arisia-westin-1E.png">Galleria Level&nbsp;(1E)</a>
-</table>
-
-<h2>Sample Links</h2>
-<ul>
-<li><a href="http://example.com/">Newsletter</a>
-<li><a href="http://example.com/">Restaurant Guide</a> (PDF, 6MB)
-<li><a href="http://example.com/">Progress Report 5</a> (web page)
-<li><a href="http://example.com/">Code of Conduct</a> (PDF)
-</ul>
-
-<h2>Sample Quick Reference</h2>
-<dl class="quick-ref">
-<dt><b>Access/Handicapped Services</b>: see Info Desk near elevators
-
-<dt><b>Art Show</b>: Harbor Ballroom II/III (3E)
-<dd><table>
-<tr><td>Friday<td>6pm–<td>9pm
-<tr><td>Saturday<td>10am–<td>6pm, 8pm–10pm
-<tr><td>Sunday<td>10am–<td>1:30pm
-</table>
-<b>Sales Pickup / Artist Checkout</b>: Sunday 3:30pm–7:30pm<br>
-<b>Voice Auction</b>: Sunday 4:30pm<br>
-<b>Sales Pickup / Artist Checkout</b>: Monday 10am–1pm
-
-<dt><b>...</b>
-</dl>
--->
-
 </div>
 
 
-<div id="prog_ls" class="ls"><br><div class="ls_loading">Loading programme data&hellip;</div></div>
+<div id="prog_ls" class="ls"><br><div class="ls_loading"><p>Loading programme data&hellip;</p><p>(Hm, is this "Loading" notice not going away, and you're running Firefox? You may be experiencing a bug in Firefox we can't do anything about. :-(<br/>Your options are:<ul><li>use a <a href="http://chrome.google.com" target="_blank">different browser</a></li><li>try opening a Private Window (but your "My con" data won't be saved)</li><li>create a new <a href="https://support.mozilla.org/en-US/kb/profile-manager-create-and-remove-firefox-profiles" target="_blank">new Firefox profile</a></li><li><a href="http://askubuntu.com/questions/110649/how-can-i-stop-firefox-throwing-a-ns-error-file-corrupted-error" target="_blank">fix the problem directly</a> (recommended for techie-geeks only)</ul><br/>Sorry for the inconvenience!</p></div></div>
 
 </div><!-- /main -->
 
-<script src="http://konopas.org/demo/data/program.js"></script>
-<script src="http://konopas.org/demo/data/people.js"></script>
-<script src="konopas.js"></script>
+<script>
+var cb = Math.round(new Date().getTime() / 1000);
+document.write('<scr' + 'ipt src="/data/program.js?cb=' + cb + '"></scr' + 'ipt>');
+document.write('<scr' + 'ipt src="/data/people.js?cb=' + cb + '"></scr' + 'ipt>');
+</script>
+<script src="konopas.min.js"></script>
 <script>
 var konopas = new KonOpas({
-	'id': '',
+	'id': 'nineworlds15',
 	'default_duration': 0,
 	'time_show_am_pm': true,
 	'show_all_days_by_default': true,
 	'use_server': false
 });
+
 konopas.set_program(program, {
-	'day': {},
-	'area': {},
-	'tag': {}
+	'day': {
+        'labels': {
+            'all_days': 'All days',
+            'day': 'Select a day...'
+        }
+    },
+	'area': {
+		'labels': {
+			'all_areas': 'Everywhere',
+            'area': 'Select a room...'
+		}
+    },
+	'tag': {
+		'labels': {
+            'all_tags': 'All tracks',
+			'tag': 'Select a track...'
+		}
+	}
 });
 konopas.set_people(people);
 konopas.set_view();
 </script>
+</body>
+</html>
