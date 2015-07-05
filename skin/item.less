@@ -6,6 +6,14 @@
 	text-align: center;
 }
 
+.flag () {
+    border: @border-normal;
+    border-radius: @border-radius;
+    padding: 4px;
+    text-align: center;
+    .font-heavy;
+}
+
 .day-link {
 	display: block;
 	max-width: (@full-width - 40px);
@@ -72,7 +80,21 @@
 	margin-bottom: 5px;
 	cursor: pointer;
 	> div { margin: 0 10px; }
-	.title { margin: 3px 0 3px 10px; }
+	.title {
+        margin: 3px 0 3px 10px;
+        .flag_warning {
+            .flag;
+            background: @bg-flag-warning;
+        }
+        .flag_caution {
+            .flag;
+            background: @bg-flag-caution;
+        }
+        .flag_notice {
+            .flag;
+            background: @bg-flag-notice;
+        }
+    }
 	.loc, > .item-people {
 		display: inline-block;
 		color: @fg-light;
