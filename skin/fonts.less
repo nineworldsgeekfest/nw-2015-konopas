@@ -1,6 +1,6 @@
 .font-normal () { font-family: 'Roboto', sans-serif; font-weight: normal; }
 .font-heavy () { font-weight: bold; }
-.font-title () { font-family: 'Hammersmith-One'; font-weight: 400; }
+.font-title () { font-family: 'Hammersmith One'; font-weight: 400; }
 .font-small () { font-size: 0.875em; }
 
 @font-face {
@@ -16,8 +16,10 @@
   src: local('Roboto Medium'), local('Roboto-Medium'), url(Roboto500.ttf) format('truetype');
 }
 @font-face {
-  font-family: 'Hammersmith-One';
+  font-family: 'Hammersmith One';
   font-style: normal;
   font-weight: normal;
-  src: local('Hammersmith One Regular'), local('Hammersmith-One-Regular'), url(https://nineworlds.co.uk/sites/nineworlds.co.uk/themes/nineworlds/fonts/hammersmithone-webfont.ttf) format('truetype');
+  src: local('Hammersmith One Regular'), local('Hammersmith-One-Regular'); 
+  src: url(https://nineworlds.co.uk/sites/nineworlds.co.uk/themes/nineworlds/fonts/hammersmithone-webfont.eot);
+  src: url(https://nineworlds.co.uk/sites/nineworlds.co.uk/themes/nineworlds/fonts/hammersmithone-webfont.woff) format('woff'), url(https://nineworlds.co.uk/sites/nineworlds.co.uk/themes/nineworlds/fonts/hammersmithone-webfont.ttf) format('truetype');
 }
